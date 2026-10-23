@@ -1,0 +1,22 @@
+name: Bug report
+description: Something in the Mac app doesn't work
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes: { label: App version, description: "Settings → About", placeholder: "0.8.3" }
+    validations: { required: true }
+  - type: input
+    id: macos
+    attributes: { label: macOS version, placeholder: "macOS 26.1" }
+    validations: { required: true }
+  - type: input
+    id: cameras
+    attributes: { label: Camera model(s) involved, placeholder: "eufyCam S3 Pro" }
+  - type: textarea
+    id: what
+    attributes: { label: What happened, description: "What you did, what you expected, what you saw instead. Screenshots help. Don't include your HomeBase key, serial or account details." }
+    validations: { required: true }
+  - type: dropdown
+    id: bridge
+    attributes: { label: Home bridge in use?, options: ["No", "Yes"] }
